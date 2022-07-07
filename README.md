@@ -10,7 +10,7 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 
 > [🔖 Accessing HANDS-ON](#-start-hands-on)
 
-## 📋 Table of contents
+## 📋 Table of content
 
 <img src="images/illustrations.png?raw=true" align="right" width="300px"/>
 
