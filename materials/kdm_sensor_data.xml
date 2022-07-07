@@ -1,0 +1,525 @@
+<KDMPROJECT>
+  <ERMODEL>
+    <mxGraphModel dx="1" dy="0" grid="1" guides="1" tooltips="1" connect="1" fold="1" page="0" pageScale="1" pageWidth="826" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="Network" style="whiteSpace=wrap" vertex="1" parent="1">
+          <mxGeometry x="380" y="240" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="Sensor" style="whiteSpace=wrap" vertex="1" parent="1">
+          <mxGeometry x="840" y="240" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="has" style="shape=card;whiteSpace=wrap" vertex="1" parent="1">
+          <mxGeometry x="590" y="232.5" width="130" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="n" edge="1" source="4" target="3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="Temperature" style="shape=cube;whiteSpace=wrap" vertex="1" parent="1">
+          <mxGeometry x="840" y="480" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="records" style="shape=note;whiteSpace=wrap" vertex="1" parent="1">
+          <mxGeometry x="825" y="350" width="130" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="1" style="entryX=0.5;entryY=1" edge="1" source="7" target="3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="n" edge="1" source="7" target="6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="1" style="text;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="1" style="exitX=0;exitY=0.5;exitPerimeter=0;entryX=1;entryY=0.5" edge="1" source="4" target="2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="name" style="ellipse;fontStyle=4" vertex="1" parent="1">
+          <mxGeometry x="340" y="140" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="description" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="440" y="140" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="region" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="340" y="347.5" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="number of sensors" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="430" y="350.5" width="150" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" style="exitX=0.5;exitY=1;entryX=0.5;entryY=0" edge="1" source="12" target="2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" style="exitX=0.5;exitY=1;entryX=0.5;entryY=0" edge="1" source="13" target="2" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="240" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="18" style="exitX=0.5;exitY=1;entryX=0.5;entryY=0" edge="1" source="2" target="14" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="19" style="exitX=0.5;exitY=1;entryX=0.5;entryY=0" edge="1" source="2" target="15" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="20" value="id" style="ellipse;fontStyle=4" vertex="1" parent="1">
+          <mxGeometry x="800" y="140" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" value="latitude" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="900" y="140" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="longitude" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="960" y="190" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" style="entryX=0.5;entryY=0" edge="1" source="20" target="3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="24" style="entryX=0.5;entryY=0" edge="1" source="22" target="3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="25" style="entryX=0.5;entryY=0" edge="1" source="21" target="3" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="200" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="26" value="characteristics" style="ellipse;shape=doubleEllipse;whiteSpace=wrap" vertex="1" parent="1">
+          <mxGeometry x="980" y="247.5" width="120" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="27" style="entryX=1;entryY=0.5" edge="1" source="26" target="3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="28" value="timestamp" style="ellipse;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="710" y="530.5" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="29" value="value" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="990" y="487.5" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="30" style="exitX=1;exitY=0.5;entryX=0;entryY=0.5" edge="1" source="28" target="6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="31" style="exitX=0;exitY=0.5" edge="1" source="29" target="6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="32" value="date" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="710" y="445.5" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="33" value="hour" style="ellipse" vertex="1" parent="1">
+          <mxGeometry x="710" y="488" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="34" style="exitX=1;exitY=0.5;entryX=0;entryY=0.5" edge="1" source="33" target="6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="35" style="exitX=1;exitY=0.5;entryX=0;entryY=0.5" edge="1" source="32" target="6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+    <KEYS_JSON>
+{"records":["Sensor.id,Temperature.timestamp"],"Temperature":["Sensor.id,Temperature.timestamp"]}    </KEYS_JSON>
+  </ERMODEL>
+  <ACCESS_PATTERNS width="1150px" height="" left="261px" top="664px">
+    <Q1>
+      <APTYPE>
+simple      </APTYPE>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+                                          <DIV>
+Network.name                                                    </DIV>
+                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+        <ORDERBY>
+ASC        </ORDERBY>
+      </FR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+                                          <DIV>
+Network.description                                                    </DIV>
+                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+      </FR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+                                          <DIV>
+Network.region                                                    </DIV>
+                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+      </FR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+                                          <DIV>
+Network.number of sensors                                                    </DIV>
+                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+      </FR>
+      <DESCR>
+Find information about all networks; order by name (asc)      </DESCR>
+    </Q1>
+    <Q2>
+      <APTYPE>
+simple      </APTYPE>
+      <GR>
+        <ATTRIBUTE>
+          <DIV>
+Network.name          </DIV>
+        </ATTRIBUTE>
+        <VRS>
+value        </VRS>
+      </GR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+Sensor.id          </DIV>
+        </ATTRIBUTE>
+      </FR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+Sensor.latitude          </DIV>
+        </ATTRIBUTE>
+      </FR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+Sensor.longitude          </DIV>
+        </ATTRIBUTE>
+      </FR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+Temperature.value          </DIV>
+        </ATTRIBUTE>
+      </FR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+Temperature.date          </DIV>
+        </ATTRIBUTE>
+        <ORDERBY>
+DESC        </ORDERBY>
+      </FR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+Temperature.hour          </DIV>
+        </ATTRIBUTE>
+        <ORDERBY>
+DESC        </ORDERBY>
+      </FR>
+      <DESCR>
+Find hourly average temperatures for every sensor in a specified network for a given date range; order by date (desc) and hour (desc)      </DESCR>
+    </Q2>
+    <Q3>
+      <APTYPE>
+simple      </APTYPE>
+      <GR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+Network.name                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+        <VRS>
+value        </VRS>
+      </GR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+Sensor.id                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+      </FR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+Sensor.latitude                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+      </FR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+Sensor.longitude                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+      </FR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+Sensor.characteristics                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+      </FR>
+      <DESCR>
+Find information about all sensors in a specified network      </DESCR>
+    </Q3>
+    <Q4>
+      <APTYPE>
+simple      </APTYPE>
+      <GR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+Sensor.id                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+        <VRS>
+value        </VRS>
+      </GR>
+      <GR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+Temperature.date                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+        <VRS>
+value        </VRS>
+      </GR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+Temperature.timestamp                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+        <ORDERBY>
+DESC        </ORDERBY>
+      </FR>
+      <FR>
+        <ATTRIBUTE>
+          <DIV>
+            <DIV>
+                          <DIV>
+Temperature.value                                    </DIV>
+                      </DIV>
+          </DIV>
+        </ATTRIBUTE>
+      </FR>
+      <DESCR>
+Find raw measurements for a particular sensor on a specified date; order by timestamp (desc)      </DESCR>
+    </Q4>
+  </ACCESS_PATTERNS>
+  <LOGICAL_MODEL>
+    <Q1 qTemplate="SELECT |s|Network__name|e|, |s|Network__description|e|, |s|Network__region|e|, |s|Network__number of sensors|e| FROM |s|tableName|e| WHERE |s|dummy|e|=? ORDER BY |s|Network__name|e| ASC;">
+      <tbl>
+        <table0/>
+        <columns>
+          <dummy origName="dummy">
+            <K/>
+          </dummy>
+          <name origName="Network__name">
+            <C>
+ASC              <expl/>
+            </C>
+          </name>
+          <description origName="Network__description"/>
+          <region origName="Network__region"/>
+          <numberofsensors origName="Network__number of sensors"/>
+        </columns>
+      </tbl>
+    </Q1>
+    <Q2 qTemplate="SELECT |s|Temperature__date|e|, |s|Temperature__hour|e|, |s|Sensor__id|e|, |s|Sensor__latitude|e|, |s|Sensor__longitude|e|, |s|Temperature__value|e| FROM |s|tableName|e| WHERE |s|Network__name|e|=? ORDER BY |s|Temperature__date|e| DESC, |s|Temperature__hour|e| DESC;">
+      <tbl>
+        <table1/>
+        <columns>
+          <name origName="Network__name">
+            <K/>
+            <NOCLUST/>
+          </name>
+          <date origName="Temperature__date">
+            <C>
+DESC              <expl/>
+            </C>
+          </date>
+          <hour origName="Temperature__hour">
+            <C>
+DESC              <expl/>
+            </C>
+          </hour>
+          <id origName="Sensor__id">
+            <C>
+ASC            </C>
+          </id>
+          <timestamp origName="Temperature__timestamp">
+            <C>
+ASC            </C>
+          </timestamp>
+          <latitude origName="Sensor__latitude"/>
+          <longitude origName="Sensor__longitude"/>
+          <value origName="Temperature__value"/>
+        </columns>
+      </tbl>
+      <tbl>
+        <table2/>
+        <columns>
+          <name origName="Network__name">
+            <K/>
+            <NOCLUST/>
+          </name>
+          <date origName="Temperature__date">
+            <C>
+DESC              <expl/>
+            </C>
+          </date>
+          <hour origName="Temperature__hour">
+            <C>
+DESC              <expl/>
+            </C>
+          </hour>
+          <timestamp origName="Temperature__timestamp">
+            <C>
+ASC            </C>
+          </timestamp>
+          <id origName="Sensor__id">
+            <C>
+ASC            </C>
+          </id>
+          <latitude origName="Sensor__latitude"/>
+          <longitude origName="Sensor__longitude"/>
+          <value origName="Temperature__value"/>
+        </columns>
+      </tbl>
+    </Q2>
+    <Q3 qTemplate="SELECT |s|Sensor__id|e|, |s|Sensor__latitude|e|, |s|Sensor__longitude|e|, |s|Sensor__characteristics|e| FROM |s|tableName|e| WHERE |s|Network__name|e|=?;">
+      <tbl>
+        <sensors_by_network/>
+        <columns>
+          <name origName="Network__name">
+            <K/>
+            <NOCLUST/>
+          </name>
+          <id origName="Sensor__id">
+            <C>
+ASC            </C>
+          </id>
+          <latitude origName="Sensor__latitude"/>
+          <longitude origName="Sensor__longitude"/>
+          <characteristics origName="Sensor__characteristics">
+            <COLL/>
+            <NOCLUST/>
+          </characteristics>
+        </columns>
+      </tbl>
+    </Q3>
+    <Q4 qTemplate="SELECT |s|Temperature__timestamp|e|, |s|Temperature__value|e| FROM |s|tableName|e| WHERE |s|Temperature__date|e|=? and |s|Sensor__id|e|=? ORDER BY |s|Temperature__timestamp|e| DESC;">
+      <tbl>
+        <temperatures_by_sensor/>
+        <columns>
+          <date origName="Temperature__date">
+            <K/>
+            <NOCLUST/>
+          </date>
+          <id origName="Sensor__id">
+            <K/>
+            <NOCLUST/>
+          </id>
+          <timestamp origName="Temperature__timestamp">
+            <C>
+DESC              <expl/>
+            </C>
+          </timestamp>
+          <value origName="Temperature__value"/>
+        </columns>
+      </tbl>
+      <tbl>
+        <temperatures_by_sensor1/>
+        <columns>
+          <id origName="Sensor__id">
+            <K/>
+            <NOCLUST/>
+          </id>
+          <date origName="Temperature__date">
+            <K/>
+            <NOCLUST/>
+          </date>
+          <timestamp origName="Temperature__timestamp">
+            <C>
+DESC              <expl/>
+            </C>
+          </timestamp>
+          <value origName="Temperature__value"/>
+        </columns>
+      </tbl>
+      <tbl>
+        <temperatures_by_sensor2/>
+        <columns>
+          <date origName="Temperature__date">
+            <K/>
+            <NOCLUST/>
+          </date>
+          <id origName="Sensor__id">
+            <C>
+ASC              <expl/>
+            </C>
+          </id>
+          <timestamp origName="Temperature__timestamp">
+            <C>
+DESC              <expl/>
+            </C>
+          </timestamp>
+          <value origName="Temperature__value"/>
+        </columns>
+      </tbl>
+      <tbl>
+        <temperatures_by_sensor3/>
+        <columns>
+          <id origName="Sensor__id">
+            <K/>
+            <NOCLUST/>
+          </id>
+          <date origName="Temperature__date">
+            <C>
+ASC              <expl/>
+            </C>
+          </date>
+          <timestamp origName="Temperature__timestamp">
+            <C>
+DESC              <expl/>
+            </C>
+          </timestamp>
+          <value origName="Temperature__value"/>
+        </columns>
+      </tbl>
+    </Q4>
+    <LOGICAL_CONFIGEL>
+{"table0":"","table1":"","sensors_by_network":"","temperatures_by_sensor":""}    </LOGICAL_CONFIGEL>
+  </LOGICAL_MODEL>
+</KDMPROJECT>
