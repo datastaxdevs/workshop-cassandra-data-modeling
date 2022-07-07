@@ -19,9 +19,10 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 3. [Materials for the Session](#3-materials-for-the-session)
 4. [Create your Database](#4-create-your-astra-db-instance)
 5. [Working with Data Types](#5-working-with-data-types)
-6. [Sensor Data Scenario](#6-create-sensor-tables)
-7. [Homework](#7-homework)
-8. [What's NEXT ](#8-whats-next-)
+6. [KDM Data Tool]()
+7. [Sensor Data Scenario](#7-create-sensor-tables)
+8. [Homework](#8-homework)
+9. [What's NEXT ](#9-whats-next-)
 <p><br/>
 
 ## 1. Objectives
@@ -271,7 +272,26 @@ WHERE handle = 'clunven';
 
 ```
 
-## 6. Create Sensor Tables
+
+## 6. KDM Data Tools
+
+- Download the `XML` on your machine [here](materials/kdm_sensor_data.xml)
+
+- Open [KDM tools](http://kdm.kashliev.com/)
+
+- Import the project. In the menu locate `Import Project`
+
+![](images/kdm_01.png)
+
+- Find the file `kdm_sensor_data.xml` you downloaded before and select `Import Project`
+
+![](images/kdm_02.png)
+
+- All Set
+
+![](images/kdm_03.png)
+
+## 7. Create Sensor Tables
 
 📘 **Command to execute**
 
@@ -312,7 +332,6 @@ CREATE TABLE temperatures_by_network (
 ) WITH CLUSTERING ORDER BY (date_hour DESC, sensor ASC);
 ```
 
-## 7. KDM Data Tools
 
 
 ## 8. Homework
