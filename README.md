@@ -1,8 +1,8 @@
 # 🎓🎓 Apache Cassandra™ Data Modelling
 
-Welcome to the **Apache Cassandra™ Data Modelling** workshop! In this two-hour workshop, we show the methodoloy to build an effective data model with distributed `NoSQL database Apache Cassandra™`.
+Welcome to the **Apache Cassandra™ Data Modelling** workshop! In this two-hour workshop, we show the methodology to build an effective data model with the distributed `NoSQL database Apache Cassandra™`.
 
-Using **Astra DB**, the cloud based _Cassandra-as-a-Service_ platform delivered by DataStax, we will cover the process for every developer who wants to build an applications: list the use case and build an effective data model.
+Using **Astra DB**, the cloud based _Cassandra-as-a-Service_ platform delivered by DataStax, we will cover the process for every developer who wants to build an application: list the use cases and build an effective data model.
 
 ![](images/splash.png)
 
@@ -105,7 +105,7 @@ Leveraging [Database creation guide](https://awesome-astra.github.io/docs/pages/
 > **ℹ️ Note:** If you already have a database `workshops`, simply add a keyspace `sensor_data` using the `Add Keyspace` button on the bottom right hand corner of db dashboard page.
 
 While the database is being created, you will also get a **Security token**:
-save it somewhere safe, as it will be needed to later in others workshop (In particular the string starting with `AstraCS:...`.)
+save it somewhere safe, as it will be needed to later in other workshops (In particular the string starting with `AstraCS:...`.)
 
 The status will change from `Pending` to `Active` when the database is ready, this will only take 2-3 minutes. You will also receive an email when it is ready.
 
@@ -230,7 +230,7 @@ UPDATE table_with_udt
 SET adress = {street:'pingouin alley',city:'antarctica',state:'melting'}
 WHERE uid = 'superman';
 
-// Replace 1 fields
+// Replace a single field
 UPDATE table_with_udt 
 SET adress.state = 'melt'
 WHERE uid = 'superman';
@@ -254,10 +254,10 @@ CREATE TABLE IF NOT EXISTS table_with_counters (
 UPDATE table_with_counters SET followers = followers + 1
 WHERE  handle = 'clunven';
 
-// Some counters are… null
+// Some counters are... null
 SELECT * from table_with_counters;
 
-// Set to 0…but set is not valid
+// Set to 0... but set is not valid
 UPDATE table_with_counters 
 SET following = following + 0, notifications = notifications + 0
 WHERE handle = 'clunven';
@@ -296,11 +296,12 @@ WHERE handle = 'clunven';
 
 ## 7. Create Sensor Tables
 
-### ✅ Step 7a. Run Scenario with Killrcoda 
+### ✅ Step 7a. Run Scenario with Killrcoda
 
-- [Run KillrKoca Scenario](https://killercoda.com/datastaxdevs/course/cassandra-data-modeling)
+- [Run KillrKoda Scenario](https://killercoda.com/datastaxdevs/course/cassandra-data-modeling)
 
 - Select Scenario `Sensor Data Modelling`
+
 ![](images/killrcoda_01.png)
 
 
