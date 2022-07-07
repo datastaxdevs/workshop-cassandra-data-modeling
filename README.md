@@ -18,8 +18,8 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 2. [Frequently asked questions](#2-frequently-asked-questions)
 3. [Materials for the Session](#3-materials-for-the-session)
 4. [Create your Database](#4-create-your-astra-db-instance)
-5. [Working with Data Types](#5-create-tables)
-6. [Sensor Data Scenario](#6-execute-crud-operations)
+5. [Working with Data Types](#5-working-with-data-types)
+6. [Sensor Data Scenario](#6-create-sensor-tables)
 7. [Homework](#7-homework)
 8. [What's NEXT ](#8-whats-next-)
 <p><br/>
@@ -82,7 +82,6 @@ we have you covered. In this repository, you'll find everything you need for thi
 - [Slide deck](/slides/slides.pdf)
 - [Discord chat](https://dtsx.io/discord)
 - [Questions and Answers](https://community.datastax.com/)
-- [Twitch backup](https://www.twitch.tv/datastaxdevs)
 
 ----
 
@@ -113,7 +112,9 @@ The status will change from `Pending` to `Active` when the database is ready, th
 
 ## 5. Working with Data types
 
-- `List` Collections
+### ✅ Step 5a. `List` Collections
+
+📘 **Command to execute**
 
 ```sql
 // Definition
@@ -143,7 +144,9 @@ UPDATE table_with_list SET items[0] = ['g']
 WHERE uid = c7133017-6409-4d7a-9479-07a5c1e79306;
 ```
 
-- `Set` Collections
+### ✅ Step 5b. `Set` Collections
+
+📘 **Command to execute**
 
 ```sql
 // Definition
@@ -169,7 +172,10 @@ UPDATE table_with_set SET animals = animals + {'sheep'}
 WHERE uid = 87fad746-4adf-4107-9858-df8643564186;
 ```
 
-- Map Collections
+### ✅ Step 5c. `Map` Collections
+
+📘 **Command to execute**
+
 
 ```sql
 // Definition
@@ -195,7 +201,9 @@ UPDATE table_with_map SET dictionary = dictionary + {'frites':'fries'}
 WHERE uid = 'fr_en';
 ```
 
-- User Defined types
+### ✅ Step 5d. User Defined types
+
+📘 **Command to execute**
 
 ```sql
 // Definition
@@ -227,7 +235,9 @@ SET adress.state = 'melt'
 WHERE uid = 'superman';
 ```
 
-- Counters
+### ✅ Step 5e. Counters
+
+📘 **Command to execute**
 
 ```sql
 // Definition
@@ -262,17 +272,6 @@ WHERE handle = 'clunven';
 ```
 
 ## 6. Create Sensor Tables
-
-Ok, now that you have a database created the next step is to create tables to work with. 
-
-_General Methodology Notes_: We'll work with a (rather simplified) _Internet of things_ application where we'll be recording temperatures coming from a network of sensors.
-
-- `networks` identified by a unique name represent a region, an area where you find related infrastructure.
-
-At this point we can execute a command to create the **networks** table.
-Just copy/paste the following command into your CQL console at the prompt.
-Try to identify the primary key, the partition key and the clustering columns
-(if any) for this table in the command:
 
 📘 **Command to execute**
 
@@ -313,7 +312,33 @@ CREATE TABLE temperatures_by_network (
 ) WITH CLUSTERING ORDER BY (date_hour DESC, sensor ASC);
 ```
 
-
 ## 7. KDM Data Tools
+
+
+## 8. Homework
+
+To submit the **homework**, please take a screenshot of the CQL Console showing the rows in tables
+`table_with_udt` and `table_with_counters` before _and_ after executing the DELETE statements.
+
+You should also complete two mini-courses (a few minutes each) about using CQL and designing tables:
+
+- Complete the mini-course "Cassandra Data Modeling / Digital Library": [lessons](https://www.datastax.com/learn/data-modeling-by-example/digital-library-data-model) and [practice](https://killercoda.com/datastaxdevs/course/cassandra-data-modeling/music-data). Take a screenshot of the final screen of the practice, with the console output at the right.
+
+Don't forget to [submit your homework](https://forms.gle/Z69y4MM3SpEDg7nt5) and be awarded a nice verified badge!
+
+## 9. What's NEXT ?
+
+We've just scratched the surface of what you can do using Astra DB, built on Apache Cassandra.
+
+Go take a look at [DataStax for Developers](https://www.datastax.com/dev) to see what else is possible.
+There's plenty to dig into!
+
+Congratulations: you made to the end of today's workshop.
+
+![Badge](images/badge/badge_data_modeling.png)
+
+**... and see you at our next workshop!**
+
+> Sincerely yours, The DataStax Developers
 
 
