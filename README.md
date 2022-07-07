@@ -298,7 +298,7 @@ WHERE handle = 'clunven';
 
 ### ✅ Step 7a. Run Scenario with Killrcoda
 
-- [Run KillrKoda Scenario](https://killercoda.com/datastaxdevs/course/cassandra-data-modeling)
+- [Run Killrcoda Scenario](https://killercoda.com/datastaxdevs/course/cassandra-data-modeling)
 
 - Select Scenario `Sensor Data Modelling`
 
