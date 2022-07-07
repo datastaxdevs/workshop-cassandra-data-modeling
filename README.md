@@ -19,7 +19,7 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 3. [Materials for the Session](#3-materials-for-the-session)
 4. [Create your Database](#4-create-your-astra-db-instance)
 5. [Working with Data Types](#5-working-with-data-types)
-6. [KDM Data Tool]()
+6. [KDM Data Tool](#6-kdm-data-tools)
 7. [Sensor Data Scenario](#7-create-sensor-tables)
 8. [Homework](#8-homework)
 9. [What's NEXT ](#9-whats-next-)
@@ -272,6 +272,7 @@ WHERE handle = 'clunven';
 
 ```
 
+[🏠 Back to Table of Contents](#-table-of-content)
 
 ## 6. KDM Data Tools
 
@@ -292,6 +293,20 @@ WHERE handle = 'clunven';
 ![](images/kdm_03.png)
 
 ## 7. Create Sensor Tables
+
+### ✅ Step 7a. Run Scenario with Killrcoda 
+
+- [Run KillrKoca Scenario](https://killercoda.com/datastaxdevs/course/cassandra-data-modeling)
+
+- Select Scenario `Sensor Data Modelling`
+![](images/killrcoda_01.png)
+
+
+- Wait for Cassandra to start
+
+![](images/killrcoda_02.png)
+
+### ✅ Step 7b. Create Schema in Astra
 
 📘 **Command to execute**
 
@@ -332,7 +347,7 @@ CREATE TABLE temperatures_by_network (
 ) WITH CLUSTERING ORDER BY (date_hour DESC, sensor ASC);
 ```
 
-
+[🏠 Back to Table of Contents](#-table-of-content)
 
 ## 8. Homework
 
@@ -354,7 +369,7 @@ There's plenty to dig into!
 
 Congratulations: you made to the end of today's workshop.
 
-![Badge](images/badge/badge_data_modeling.png)
+![Badge](images/badge_data_modeling.png)
 
 **... and see you at our next workshop!**
 
