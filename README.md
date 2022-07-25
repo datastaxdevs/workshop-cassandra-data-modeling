@@ -217,22 +217,22 @@ CREATE TYPE IF NOT EXISTS udt_address (
 // Use the UDT in a table
 CREATE TABLE IF NOT EXISTS table_with_udt (
   uid      text,
-  adress   udt_address,
+  address   udt_address,
   PRIMARY KEY (uid)
 );
 
 // INSERT (not quote on field names like street)
-INSERT INTO table_with_udt(uid, adress) 
+INSERT INTO table_with_udt(uid, address) 
 VALUES ('superman', {street:'daily planet',city:'metropolis',state:'CA'});
 
 // Replace
 UPDATE table_with_udt 
-SET adress = {street:'pingouin alley',city:'antarctica',state:'melting'}
+SET address = {street:'pingouin alley',city:'antarctica',state:'melting'}
 WHERE uid = 'superman';
 
 // Replace a single field
 UPDATE table_with_udt 
-SET adress.state = 'melt'
+SET address.state = 'melt'
 WHERE uid = 'superman';
 ```
 
