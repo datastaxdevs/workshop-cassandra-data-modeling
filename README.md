@@ -311,11 +311,13 @@ WHERE handle = 'clunven';
 
 - Follow the steps to complete the scenario
 
-### ✅ Step 7b. Create Schema in Astra
+### ✅ Step 7b. Instantiate the Sensor Data Model in Astra DB
 
-📘 **Command to execute**
+📘 **Create schema**
 
 ```sql
+USE sensor_data;
+
 CREATE TABLE IF NOT EXISTS networks (
   name        TEXT,
   description TEXT,
