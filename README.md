@@ -622,7 +622,7 @@ WHERE sensor = 's1003'
 
 ## 8. Dynamic Bucketing
 
-Consider the `followers_by_user` table that support query `Find all followers of a given user`:
+- Consider the `followers_by_user` table that support query `Find all followers of a given user`:
 ```sql
 CREATE TABLE followers_by_user (
   user UUID,
@@ -632,7 +632,40 @@ CREATE TABLE followers_by_user (
 );
 ```
 
-Assume that a user may have none to millions of followers. With dynamic bucketing, we can introduce artificial buckets to store followers. A user with a few followers may only need one bucket. A user with many followers may need many buckets. Once buckets get filled with followers, we can dynamically assign new buckets to store new followers.
+Assume that a user may have none to millions of followers. With dynamic bucketing, we can introduce artificial buckets to store followers. A user with a few followers may only need one bucket. A user with many followers may need many buckets. Once buckets belonging to a particular user get filled with followers, we can dynamically assign new buckets to store new followers of this user.
+
+- Implement dynamic bucketing in Astra DB:
+```sql
+-- Table to manage buckets
+CREATE TABLE buckets_by_user (
+  user UUID,
+  bucket TIMEUUID,
+  PRIMARY KEY ((user),
+                bucket)
+)
+WITH CLUSTERING ORDER BY (
+  bucket DESC
+);
+
+-- Table to store followers
+CREATE TABLE followers_by_bucket (
+  bucket TIMEUUID,
+  follower UUID,
+  PRIMARY KEY ((bucket), 
+                follower)
+);
+
+
+-- Sample data
+INSERT INTO buckets_by_user (user, bucket) VALUES (aaaaaaaa-5a7b-46a4-aaa1-1f85caa020a5, 49171ffe-0d12-11ed-861d-0242ac120002);
+INSERT INTO buckets_by_user (user, bucket) VALUES (aaaaaaaa-5a7b-46a4-aaa1-1f85caa020a5, 74a13ede-0d12-11ed-861d-0242ac120002);
+
+INSERT INTO followers_by_bucket (bucket, follower) VALUES (49171ffe-0d12-11ed-861d-0242ac120002, bbbbbbbb-172d-4afa-a346-ba198e881dca);
+INSERT INTO followers_by_bucket (bucket, follower) VALUES (49171ffe-0d12-11ed-861d-0242ac120002, cccccccc-a3a2-4bb2-89b9-2e3c18c61b9c);
+
+INSERT INTO followers_by_bucket (bucket, follower) VALUES (74a13ede-0d12-11ed-861d-0242ac120002, dddddddd-d334-49da-b8b2-50765575a617);
+```
+
 
 
 
