@@ -21,8 +21,9 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 5. [Working with Data Types](#5-working-with-data-types)
 6. [KDM Data Modeling Tool](#6-kdm-data-modeling-tool)
 7. [Sensor Data Modeling](#7-sensor-data-modeling)
-8. [Homework](#8-homework)
-9. [What's NEXT ](#9-whats-next-)
+8. [Dynamic Bucketing](#8-dynamic-bucketing)
+9. [Homework](#9-homework)
+10. [What's NEXT ](#10-whats-next-)
 <p><br/>
 
 ## 1. Objectives
@@ -619,7 +620,12 @@ WHERE sensor = 's1003'
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 8. Homework
+## 8. Dynamic Bucketing
+
+
+[🏠 Back to Table of Contents](#-table-of-content)
+
+## 9. Homework
 
 To submit the **homework**, please take a screenshot of the CQL Console showing the rows in tables
 `table_with_udt` and `table_with_counters` before _and_ after executing the DELETE statements.
@@ -630,7 +636,9 @@ You should also complete two mini-courses (a few minutes each) about using CQL a
 
 Don't forget to [submit your homework](https://forms.gle/Z69y4MM3SpEDg7nt5) and be awarded a nice verified badge!
 
-## 9. What's NEXT ?
+[🏠 Back to Table of Contents](#-table-of-content)
+
+## 10. What's NEXT ?
 
 We've just scratched the surface of what you can do using Astra DB, built on Apache Cassandra.
 
