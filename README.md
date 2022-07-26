@@ -276,15 +276,13 @@ WHERE handle = 'clunven';
 
 ## 6. KDM Data Modeling Tool
 
-- Download the `XML` on your machine [here](materials/kdm_sensor_data.xml)
+- Download [the project XML file](https://raw.githubusercontent.com/datastaxdevs/workshop-cassandra-data-modeling/main/materials/kdm_sensor_data.xml)
 
-- Open [KDM tools](http://kdm.kashliev.com/)
+- Open [the KDM tool](http://kdm.kashliev.com/)
 
-- Import the project. In the menu locate `Import Project`
+- Import the project by selecting `Import Project` from the menu and specifying file `kdm_sensor_data.xml` 
 
 ![](images/kdm_01.png)
-
-- Find the file `kdm_sensor_data.xml` you downloaded before and select `Import Project`
 
 ![](images/kdm_02.png)
 
