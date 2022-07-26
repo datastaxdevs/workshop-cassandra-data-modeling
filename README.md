@@ -660,7 +660,13 @@ INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (49171ffe-0d12-11ed-861d-0
 INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (74a13ede-0d12-11ed-861d-0242ac120002, 's1003');
 ```
 
-
+- Procedure to add a new sensor to a network:
+ 1. Get the latest bucket.
+```sql
+SELECT bucket FROM buckets_by_network WHERE network = 'forest-net' LIMIT 1;
+```
+ 2. Check the number of sensors in the bucket.
+ 3. Depending on the sensors-per-bucket threshold, insert a new sensor into the existing bucket, or create a new bucket and insert into the new bucket.
 
 
 
