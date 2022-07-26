@@ -203,7 +203,7 @@ UPDATE table_with_map SET dictionary = dictionary + {'frites':'fries'}
 WHERE uid = 'fr_en';
 ```
 
-### ✅ Step 5d. User Defined types
+### ✅ Step 5d. User-Defined Types
 
 📘 **Command to execute**
 
