@@ -622,7 +622,7 @@ WHERE sensor = 's1003'
 
 ## 8. Dynamic Bucketing
 
-- Consider the `sensors_by_network_2` table that support query `Find all sensors of a given network`:
+- Consider the table that supports query `Find all sensors in a specified network`:
 ```sql
 CREATE TABLE sensors_by_network_2 (
   network TEXT,
