@@ -286,7 +286,7 @@ WHERE handle = 'clunven';
 
 ![](images/kdm_02.png)
 
-- All Set
+- Explore the five data modeling steps supported by KDM. Note that the conceptual data model in Step 1 and queries in Step 2 are already defined.
 
 ![](images/kdm_03.png)
 
