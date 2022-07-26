@@ -622,43 +622,42 @@ WHERE sensor = 's1003'
 
 ## 8. Dynamic Bucketing
 
-- Consider the `followers_by_user` table that support query `Find all followers of a given user`:
+- Consider the `sensors_by_network_2` table that support query `Find all sensors of a given network`:
 ```sql
-CREATE TABLE followers_by_user (
-  user UUID,
-  follower UUID,
-  PRIMARY KEY ((user),
-                follower) 
+CREATE TABLE sensors_by_network_2 (
+  network TEXT,
+  sensor TEXT,
+  PRIMARY KEY ((network), sensor) 
 );
 ```
 
-Assume that a user may have none to millions of followers. With dynamic bucketing, we can introduce artificial buckets to store followers. A user with a few followers may only need one bucket. A user with many followers may need many buckets. Once buckets belonging to a particular user get filled with followers, we can dynamically assign new buckets to store new followers of this user.
+Assume that a network may have none to millions of sensors. With dynamic bucketing, we can introduce artificial buckets to store sensors. A network with a few sensors may only need one bucket. A network with many sensors may need many buckets. Once buckets belonging to a particular network get filled with sensors, we can dynamically assign new buckets to store new sensors of this network.
 
 - Implement dynamic bucketing in Astra DB:
 ```sql
 -- Table to manage buckets
-CREATE TABLE buckets_by_user (
-  user UUID,
+CREATE TABLE buckets_by_network (
+  network TEXT,
   bucket TIMEUUID,
-  PRIMARY KEY ((user), bucket)
+  PRIMARY KEY ((network), bucket)
 ) WITH CLUSTERING ORDER BY (bucket DESC);
 
--- Table to store followers
-CREATE TABLE followers_by_bucket (
+-- Table to store sensors
+CREATE TABLE sensors_by_bucket (
   bucket TIMEUUID,
-  follower UUID,
-  PRIMARY KEY ((bucket), follower)
+  sensor UUID,
+  PRIMARY KEY ((bucket), sensor)
 );
 
 
 -- Sample data
-INSERT INTO buckets_by_user (user, bucket) VALUES (aaaaaaaa-5a7b-46a4-aaa1-1f85caa020a5, 49171ffe-0d12-11ed-861d-0242ac120002);
-INSERT INTO buckets_by_user (user, bucket) VALUES (aaaaaaaa-5a7b-46a4-aaa1-1f85caa020a5, 74a13ede-0d12-11ed-861d-0242ac120002);
+INSERT INTO buckets_by_network (network, bucket) VALUES ('forest-net', 49171ffe-0d12-11ed-861d-0242ac120002);
+INSERT INTO buckets_by_network (network, bucket) VALUES ('forest-net', 74a13ede-0d12-11ed-861d-0242ac120002);
 
-INSERT INTO followers_by_bucket (bucket, follower) VALUES (49171ffe-0d12-11ed-861d-0242ac120002, bbbbbbbb-172d-4afa-a346-ba198e881dca);
-INSERT INTO followers_by_bucket (bucket, follower) VALUES (49171ffe-0d12-11ed-861d-0242ac120002, cccccccc-a3a2-4bb2-89b9-2e3c18c61b9c);
+INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (49171ffe-0d12-11ed-861d-0242ac120002, 's1001');
+INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (49171ffe-0d12-11ed-861d-0242ac120002, 's1002');
 
-INSERT INTO followers_by_bucket (bucket, follower) VALUES (74a13ede-0d12-11ed-861d-0242ac120002, dddddddd-d334-49da-b8b2-50765575a617);
+INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (74a13ede-0d12-11ed-861d-0242ac120002, 's1003');
 ```
 
 
