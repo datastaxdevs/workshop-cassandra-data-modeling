@@ -696,14 +696,12 @@ WHERE bucket IN (74a13ede-0d12-11ed-861d-0242ac120002, 49171ffe-0d12-11ed-861d-0
 
 ## 9. Homework
 
-To submit the **homework**, please take a screenshot of the CQL Console showing the rows in tables
+1. Complete [Working with Data Types](#5-working-with-data-types). Take a screenshot of the CQL Console showing the rows in tables
 `table_with_udt` and `table_with_counters` before _and_ after executing the DELETE statements.
 
-You should also complete two mini-courses (a few minutes each) about using CQL and designing tables:
+2. Complete the mini-course "Cassandra Data Modeling / Digital Library": [lessons]([https://www.datastax.com/learn/data-modeling-by-example/digital-library-data-model](https://www.datastax.com/learn/data-modeling-by-example/time-series-model)) and [practice](https://killercoda.com/datastaxdevs/course/cassandra-data-modeling/time-series-data). Take a screenshot of the final screen of the practice, with the console output at the right.
 
-- Complete the mini-course "Cassandra Data Modeling / Digital Library": [lessons](https://www.datastax.com/learn/data-modeling-by-example/digital-library-data-model) and [practice](https://killercoda.com/datastaxdevs/course/cassandra-data-modeling/music-data). Take a screenshot of the final screen of the practice, with the console output at the right.
-
-Don't forget to [submit your homework](https://forms.gle/Z69y4MM3SpEDg7nt5) and be awarded a nice verified badge!
+3. [Submit your homework](https://forms.gle/Z69y4MM3SpEDg7nt5) and be awarded a nice verified badge!
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
