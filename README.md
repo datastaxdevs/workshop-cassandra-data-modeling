@@ -609,7 +609,7 @@ FROM sensors_by_network
 WHERE network = 'forest-net';
 ```
 
--Q4: Find raw measurements for sensor `s1003` on `2020-07-06`; order by timestamp (desc)
+- Q4: Find raw measurements for sensor `s1003` on `2020-07-06`; order by timestamp (desc)
 ```sql
 SELECT timestamp, value 
 FROM temperatures_by_sensor
