@@ -15,9 +15,9 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 <img src="images/illustrations.png?raw=true" align="right" width="300px"/>
 
 1. [Objectives](#1-objectives)
-2. [Frequently asked questions](#2-frequently-asked-questions)
+2. [Frequently Asked Questions](#2-frequently-asked-questions)
 3. [Materials for the Session](#3-materials-for-the-session)
-4. [Create your Database](#4-create-your-astra-db-instance)
+4. [Create Your Astra DB Instance](#4-create-your-astra-db-instance)
 5. [Working with Data Types](#5-working-with-data-types)
 6. [KDM Data Modeling Tool](#6-kdm-data-modeling-tool)
 7. [Sensor Data Modeling](#7-sensor-data-modeling)
@@ -37,7 +37,7 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 
 🚀 **Have fun with an interactive session**
 
-## 2. Frequently asked questions
+## 2. Frequently Asked Questions
 
 <p/>
 <details>
@@ -88,7 +88,7 @@ we have you covered. In this repository, you'll find everything you need for thi
 
 # 🏁 Start Hands-on
 
-## 4. Create your Astra DB instance
+## 4. Create Your Astra DB Instance
 
 _**`ASTRA DB`** is the simplest way to run Cassandra with zero operations at all - just push the button and get your cluster. No credit card required, 40M read/write operations and about 80GB storage monthly for free - sufficient to run small production workloads. If you end your credits the databases will pause, no charge_
 
@@ -111,7 +111,7 @@ The status will change from `Pending` to `Active` when the database is ready, th
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 5. Working with Data types
+## 5. Working with Data Types
 
 ### ✅ Step 5a. `List` Collections
 
