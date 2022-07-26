@@ -622,6 +622,21 @@ WHERE sensor = 's1003'
 
 ## 8. Dynamic Bucketing
 
+Consider the `followers_by_user` table that support query `Find all followers of a given user`:
+```sql
+CREATE TABLE followers_by_user (
+  user UUID,
+  follower UUID,
+  PRIMARY KEY ((user),
+                follower) 
+);
+```
+
+Assume that a user may have none to millions of followers. With dynamic bucketing, we can introduce artificial buckets to store followers. A user with a few followers may only need one bucket. A user with many followers may need many buckets. Once buckets get filled with followers, we can dynamically assign new buckets to store new followers.
+
+
+
+
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
