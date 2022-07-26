@@ -622,7 +622,7 @@ WHERE sensor = 's1003'
 
 ## 8. Dynamic Bucketing
 
-- Consider the table that supports query `Find all sensors in a specified network`:
+Consider the table that supports query `Find all sensors in a specified network`:
 ```sql
 CREATE TABLE sensors_by_network_2 (
   network TEXT,
@@ -633,7 +633,7 @@ CREATE TABLE sensors_by_network_2 (
 
 Assume that a network may have none to millions of sensors. With dynamic bucketing, we can introduce artificial buckets to store sensors. A network with a few sensors may only need one bucket. A network with many sensors may need many buckets. Once buckets belonging to a particular network get filled with sensors, we can dynamically assign new buckets to store new sensors of this network.
 
-- Implement dynamic bucketing in Astra DB:
+📘 **Implement dynamic bucketing in Astra DB**
 ```sql
 -- Table to manage buckets
 CREATE TABLE buckets_by_network (
@@ -660,14 +660,21 @@ INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (49171ffe-0d12-11ed-861d-0
 INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (74a13ede-0d12-11ed-861d-0242ac120002, 's1003');
 ```
 
-- Procedure to add a new sensor to a network:
+📘 **Add a new sensor to a network**
+ 
  1. Get the latest bucket.
 ```sql
 SELECT bucket FROM buckets_by_network WHERE network = 'forest-net' LIMIT 1;
 ```
  2. Check the number of sensors in the bucket.
+```sql
+SELECT COUNT(*) AS sensors 
+FROM sensors_by_bucket WHERE bucket = 74a13ede-0d12-11ed-861d-0242ac120002;
+```
  3. Depending on the sensors-per-bucket threshold, insert a new sensor into the existing bucket, or create a new bucket and insert into the new bucket.
-
+```sql
+INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (74a13ede-0d12-11ed-861d-0242ac120002, 's1004');
+```
 
 
 
