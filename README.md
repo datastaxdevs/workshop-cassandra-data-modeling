@@ -583,16 +583,41 @@ INSERT INTO temperatures_by_sensor
 VALUES ('s1003','2020-07-06','2020-07-06 12:59:59',1429);
 ```
 
-📘 **Create schema**
+📘 **Execute queries**
 
-📘 **Create schema**
+- Q1: Find information about all networks; order by name (asc)
+```sql
+SELECT name, description,
+       region, num_sensors
+FROM networks
+WHERE bucket = 'all';
+```
 
-📘 **Create schema**
+- Q2: Find hourly average temperatures for every sensor in network `forest-net` and date range [`2020-07-04`,`2020-07-06`] within the weeks of `2020-06-28` and `2020-07-05`; order by date (desc) and hour (desc)
+```sql
+SELECT date_hour, avg_temperature, 
+       latitude, longitude, sensor 
+FROM temperatures_by_network
+WHERE network    = 'forest-net'
+  AND week      IN ('2020-07-05','2020-06-28')
+  AND date_hour >= '2020-07-04'
+  AND date_hour  < '2020-07-07';  
+```
 
-📘 **Create schema**
+- Q3: Find information about all sensors in network `forest-net`
+```sql
+SELECT * 
+FROM sensors_by_network
+WHERE network = 'forest-net';
+```
 
-📘 **Create schema**
-
+-Q4: Find raw measurements for sensor `s1003` on `2020-07-06`; order by timestamp (desc)
+```sql
+SELECT timestamp, value 
+FROM temperatures_by_sensor
+WHERE sensor = 's1003'
+  AND date   = '2020-07-06';
+```
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
