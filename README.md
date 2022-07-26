@@ -645,7 +645,7 @@ CREATE TABLE buckets_by_network (
 -- Table to store sensors
 CREATE TABLE sensors_by_bucket (
   bucket TIMEUUID,
-  sensor UUID,
+  sensor TEXT,
   PRIMARY KEY ((bucket), sensor)
 );
 
