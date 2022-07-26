@@ -20,7 +20,7 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 4. [Create your Database](#4-create-your-astra-db-instance)
 5. [Working with Data Types](#5-working-with-data-types)
 6. [KDM Data Modeling Tool](#6-kdm-data-modeling-tool)
-7. [Sensor Data Scenario](#7-create-sensor-tables)
+7. [Sensor Data Model Scenario](#7-sensor-data-model-scenario)
 8. [Homework](#8-homework)
 9. [What's NEXT ](#9-whats-next-)
 <p><br/>
@@ -294,7 +294,7 @@ WHERE handle = 'clunven';
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 7. Create Sensor Tables
+## 7. Sensor Data Model Scenario
 
 ### ✅ Step 7a. Run Scenario with Killrcoda
 
