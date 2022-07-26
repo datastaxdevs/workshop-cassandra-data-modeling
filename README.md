@@ -20,7 +20,7 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 4. [Create your Database](#4-create-your-astra-db-instance)
 5. [Working with Data Types](#5-working-with-data-types)
 6. [KDM Data Modeling Tool](#6-kdm-data-modeling-tool)
-7. [Sensor Data Model](#7-sensor-data-model)
+7. [Sensor Data Modeling](#7-sensor-data-modeling)
 8. [Homework](#8-homework)
 9. [What's NEXT ](#9-whats-next-)
 <p><br/>
@@ -294,13 +294,13 @@ WHERE handle = 'clunven';
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 7. Sensor Data Model
+## 7. Sensor Data Modeling
 
-### ✅ Step 7a. Run Scenario with Killrcoda
+### ✅ Step 7a. Run Scenario in Killrcoda
 
-- [Run Killrcoda Scenario](https://killercoda.com/datastaxdevs/course/cassandra-data-modeling)
+- Go to [Data Modeling By Example](https://killercoda.com/datastaxdevs/course/cassandra-data-modeling)
 
-- Select Scenario `Sensor Data Modelling`
+- Select Scenario `Sensor Data Modeling`
 
 ![](images/killrcoda_01.png)
 
@@ -308,6 +308,8 @@ WHERE handle = 'clunven';
 - Wait for Cassandra to start
 
 ![](images/killrcoda_02.png)
+
+- Follow the steps to complete the scenario
 
 ### ✅ Step 7b. Create Schema in Astra
 
