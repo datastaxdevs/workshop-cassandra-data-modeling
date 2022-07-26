@@ -640,19 +640,14 @@ Assume that a user may have none to millions of followers. With dynamic bucketin
 CREATE TABLE buckets_by_user (
   user UUID,
   bucket TIMEUUID,
-  PRIMARY KEY ((user),
-                bucket)
-)
-WITH CLUSTERING ORDER BY (
-  bucket DESC
-);
+  PRIMARY KEY ((user), bucket)
+) WITH CLUSTERING ORDER BY (bucket DESC);
 
 -- Table to store followers
 CREATE TABLE followers_by_bucket (
   bucket TIMEUUID,
   follower UUID,
-  PRIMARY KEY ((bucket), 
-                follower)
+  PRIMARY KEY ((bucket), follower)
 );
 
 
