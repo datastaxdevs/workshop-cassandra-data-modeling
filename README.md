@@ -95,7 +95,7 @@ _**`ASTRA DB`** is the simplest way to run Cassandra with zero operations at all
 
 Leveraging [Database creation guide](https://awesome-astra.github.io/docs/pages/astra/create-instance/#c-procedure) create a database. *Right-Click the button* with *Open in a new TAB.*
 
-<a href="https://astra.dev/2-16"><img src="images/create_astra_db_button.png?raw=true" /></a>
+<a href="https://astra.dev/7-20"><img src="images/create_astra_db_button.png?raw=true" /></a>
 
 |Field|Value|
 |---|---|
