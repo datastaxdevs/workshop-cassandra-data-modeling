@@ -318,10 +318,11 @@ WHERE handle = 'clunven';
 USE sensor_data;
 
 CREATE TABLE IF NOT EXISTS networks (
-  name        TEXT,
-  description TEXT,
-  region      TEXT,
-  PRIMARY KEY ((name))
+  bucket          TEXT,
+  name            TEXT,
+  description     TEXT,
+  region          TEXT,
+  PRIMARY KEY ((bucket), name)
 );
 
 CREATE TABLE IF NOT EXISTS sensors_by_network (
@@ -333,22 +334,22 @@ CREATE TABLE IF NOT EXISTS sensors_by_network (
   PRIMARY KEY ((network),sensor)
 );
 
-CREATE TABLE temperatures_by_sensor (
-  sensor TEXT,
-  date DATE,
-  timestamp TIMESTAMP,
-  value FLOAT,
+CREATE TABLE IF NOT EXISTS temperatures_by_sensor (
+  sensor          TEXT,
+  date            DATE,
+  timestamp       TIMESTAMP,
+  value           FLOAT,
   PRIMARY KEY ((sensor, date),timestamp)
 ) WITH CLUSTERING ORDER BY (timestamp DESC);
 
-CREATE TABLE temperatures_by_network (
-  network TEXT,
-  week DATE,
-  date_hour TIMESTAMP,
-  sensor TEXT,
+CREATE TABLE IF NOT EXISTS temperatures_by_network (
+  network         TEXT,
+  week            DATE,
+  date_hour       TIMESTAMP,
+  sensor          TEXT,
   avg_temperature FLOAT,
-  latitude DECIMAL,
-  longitude DECIMAL,
+  latitude        DECIMAL,
+  longitude       DECIMAL,
   PRIMARY KEY ((network,week),date_hour,sensor)
 ) WITH CLUSTERING ORDER BY (date_hour DESC, sensor ASC);
 ```
