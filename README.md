@@ -108,6 +108,12 @@ Leveraging [Database creation guide](https://awesome-astra.github.io/docs/pages/
 While the database is being created, you will also get a **Security token**:
 save it somewhere safe, as it will be needed to later in other workshops (In particular the string starting with `AstraCS:...`.)
 
+> **⚠️ Important**
+> ```
+> The instructor will show you on screen how to create a token 
+> but will have to destroy to token immediately for security reasons.
+> ```
+
 The status will change from `Pending` to `Active` when the database is ready, this will only take 2-3 minutes. You will also receive an email when it is ready.
 
 [🏠 Back to Table of Contents](#-table-of-content)
