@@ -378,19 +378,24 @@ WHERE handle = 'clunven';
 
 ## 8. KDM Data Modeling Tool
 
-- Download [the project XML file](https://raw.githubusercontent.com/datastaxdevs/workshop-cassandra-data-modeling/main/materials/kdm_sensor_data.xml)
+<details>
+  <summary> <h3>🍿 Demo</h3></summary>
 
-- Open [the KDM tool](http://kdm.kashliev.com/)
+### ✅ Download [the project XML file](https://raw.githubusercontent.com/datastaxdevs/workshop-cassandra-data-modeling/main/materials/kdm_sensor_data.xml)
 
-- Import the project by selecting `Import Project` from the menu and specifying file `kdm_sensor_data.xml` 
+### ✅ Open [the KDM tool](http://kdm.kashliev.com/)
+
+### ✅ Import the project by selecting `Import Project` from the menu and specifying file `kdm_sensor_data.xml` 
 
 ![](images/kdm_01.png)
 
 ![](images/kdm_02.png)
 
-- Explore the five data modeling steps supported by KDM. Note that the conceptual data model in Step 1 and queries in Step 2 are already defined.
+### ✅ Explore the five data modeling steps supported by KDM. Note that the conceptual data model in Step 1 and queries in Step 2 are already defined.
 
 ![](images/kdm_03.png)
+
+</details>
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
