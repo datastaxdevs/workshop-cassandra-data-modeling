@@ -57,7 +57,7 @@ In this readme, we try to provide instructions for local development as well - b
 <summary><b> 2️⃣ What other prerequisites are required?</b></summary>
 <hr>
 <ul>
-<li>You will need enough *real estate* on screen, we will ask you to open a few windows and it would not fit on mobiles (tablets should be OK)
+<li>You will need enough "real estate" on screen, we will ask you to open a few windows and it would not fit on mobiles (tablets should be OK)
 <li>You will need an Astra account: don't worry, we'll work through that in the following
 <li>As "Intermediate level" we expect you to know what java and Spring are. 
 </ul>
@@ -73,7 +73,7 @@ In this readme, we try to provide instructions for local development as well - b
 <details>
 <summary><b> 4️⃣ Will I get a certificate if I attend this workshop?</b></summary>
 <hr>
-Attending the session is not enough. You need to complete the homework detailed below and you will get a nice badge that you can share on linkedin or anywhere else *(open badge specification)*
+Attending the session is not enough. You need to complete the homework detailed below and you will get a nice badge that you can share on LinkedIn or anywhere else.
 </details>
 <p/>
 
