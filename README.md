@@ -121,6 +121,14 @@ The status will change from `Pending` to `Active` when the database is ready, th
 
 ## 5. Tables with Single-Row and Multi-Row Partitions
 
+<h2 style="text-align: center;"><span style="background-color: #c2e0f4; padding: 10px; border-radius: 10px;"><a style="background-color: #c2e0f4;" href="https://gitpod.io/#https://github.com/datastaxdevs/workshop-cassandra-data-modeling-tables-single-row-partitions/" target="_blank">Working with Tables with Single-Row Partitions</a></span></h2>
+<p>&nbsp;</p>
+<p style="text-align: center;">(A <a href="https://github.com" target="_blank">GitHub</a> account may be required to run this lab in Gitpod.)</p>
+
+<h2 style="text-align: center;"><span style="background-color: #c2e0f4; padding: 10px; border-radius: 10px;"><a style="background-color: #c2e0f4;" href="https://gitpod.io/#https://github.com/datastaxdevs/workshop-cassandra-data-modeling-tables-multi-row-partitions/" target="_blank">Working with Tables with Multi-Row Partitions</a></span></h2>
+<p>&nbsp;</p>
+<p style="text-align: center;">(A <a href="https://github.com" target="_blank">GitHub</a> account may be required to run this lab in Gitpod.)</p>
+
 [🏠 Back to Table of Contents](#-table-of-content)
 
 ## 6. Dynamic Bucketing
