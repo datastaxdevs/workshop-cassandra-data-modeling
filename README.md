@@ -118,6 +118,11 @@ The status will change from `Pending` to `Active` when the database is ready, th
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
+## 5. Tables with Single-Row and Multi-Row Partitions
+
+
+
+
 ## 5. Working with Data Types
 
 ### ✅ Step 5a. `List` Collections
