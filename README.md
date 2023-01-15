@@ -132,7 +132,7 @@ A [GitHub](https://github.com) account may be required to run this hands-on lab 
 ## 6. Dynamic Bucketing
 
 <details>
-  <summary> <h3>🟪 Homework 1</h3></summary>
+  <summary> <h3>📌 Homework 1</h3></summary>
 
 Consider the table that supports query `Find all sensors in a specified network`:
 ```sql
@@ -211,7 +211,7 @@ WHERE bucket IN (74a13ede-0d12-11ed-861d-0242ac120002, 49171ffe-0d12-11ed-861d-0
 ## 7. Working with Data Types
 
 <details>
-  <summary> <h3>🟪 Homework 2</h3></summary>
+  <summary> <h3>📌 Homework 2</h3></summary>
 
 ### ✅ Step 5a. `List` Collections
 
@@ -381,11 +381,11 @@ WHERE handle = 'clunven';
 <details>
   <summary> <h3>🍿 Demo</h3></summary>
 
-### ✅ Download [the project XML file](https://raw.githubusercontent.com/datastaxdevs/workshop-cassandra-data-modeling/main/materials/kdm_sensor_data.xml)
+### ✅ Download [the project XML file](https://raw.githubusercontent.com/datastaxdevs/workshop-cassandra-data-modeling/main/materials/kdm_sensor_data.xml).
 
-### ✅ Open [the KDM tool](http://kdm.kashliev.com/)
+### ✅ Open [the KDM tool](http://kdm.kashliev.com/).
 
-### ✅ Import the project by selecting `Import Project` from the menu and specifying file `kdm_sensor_data.xml` 
+### ✅ Import the project by selecting `Import Project` from the menu and specifying file `kdm_sensor_data.xml`.
 
 ![](images/kdm_01.png)
 
