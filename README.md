@@ -132,7 +132,7 @@ A [GitHub](https://github.com) account may be required to run this hands-on lab 
 ## 6. Dynamic Bucketing
 
 <details>
-  <summary>Homework 1</summary>
+  <summary> ### ✅ Homework 1</summary>
 
 Consider the table that supports query `Find all sensors in a specified network`:
 ```sql
