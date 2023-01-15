@@ -131,6 +131,9 @@ A [GitHub](https://github.com) account may be required to run this hands-on lab 
 
 ## 6. Dynamic Bucketing
 
+<details>
+  <summary>Homework 1</summary>
+
 Consider the table that supports query `Find all sensors in a specified network`:
 ```sql
 CREATE TABLE sensors_by_network_2 (
@@ -200,6 +203,8 @@ SELECT sensor
 FROM sensors_by_bucket 
 WHERE bucket IN (74a13ede-0d12-11ed-861d-0242ac120002, 49171ffe-0d12-11ed-861d-0242ac120002);
 ```
+
+</details>
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
