@@ -18,12 +18,13 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 2. [Frequently Asked Questions](#2-frequently-asked-questions)
 3. [Materials for the Session](#3-materials-for-the-session)
 4. [Create Your Astra DB Instance](#4-create-your-astra-db-instance)
-5. [Working with Data Types](#5-working-with-data-types)
-6. [KDM Data Modeling Tool](#6-kdm-data-modeling-tool)
-7. [Sensor Data Modeling](#7-sensor-data-modeling)
-8. [Dynamic Bucketing](#8-dynamic-bucketing)
-9. [Homework](#9-homework)
-10. [What's NEXT ](#10-whats-next-)
+5. [Tables with Single-Row and Multi-Row Partitions](#5-tables-with-single-row-and-multi-row-partitions)
+6. [Dynamic Bucketing](#6-dynamic-bucketing)
+7. [Working with Data Types](#7-working-with-data-types)
+8. [KDM Data Modeling Tool](#8-kdm-data-modeling-tool)
+9. [Sensor Data Modeling](#9-sensor-data-modeling)
+10. [Homework](#10-homework)
+11. [What's NEXT ](#11-whats-next-)
 <p><br/>
 
 ## 1. Objectives
@@ -120,10 +121,83 @@ The status will change from `Pending` to `Active` when the database is ready, th
 
 ## 5. Tables with Single-Row and Multi-Row Partitions
 
+[🏠 Back to Table of Contents](#-table-of-content)
+
+## 6. Dynamic Bucketing
+
+Consider the table that supports query `Find all sensors in a specified network`:
+```sql
+CREATE TABLE sensors_by_network_2 (
+  network TEXT,
+  sensor TEXT,
+  PRIMARY KEY ((network), sensor) 
+);
+```
+
+Assume that a network may have none to millions of sensors. With dynamic bucketing, we can introduce artificial buckets to store sensors. A network with a few sensors may only need one bucket. A network with many sensors may need many buckets. Once buckets belonging to a particular network get filled with sensors, we can dynamically assign new buckets to store new sensors of this network.
+
+📘 **Implement dynamic bucketing in Astra DB**
+```sql
+-- Table to manage buckets
+CREATE TABLE buckets_by_network (
+  network TEXT,
+  bucket TIMEUUID,
+  PRIMARY KEY ((network), bucket)
+) WITH CLUSTERING ORDER BY (bucket DESC);
+
+-- Table to store sensors
+CREATE TABLE sensors_by_bucket (
+  bucket TIMEUUID,
+  sensor TEXT,
+  PRIMARY KEY ((bucket), sensor)
+);
 
 
+-- Sample data
+INSERT INTO buckets_by_network (network, bucket) VALUES ('forest-net', 49171ffe-0d12-11ed-861d-0242ac120002);
+INSERT INTO buckets_by_network (network, bucket) VALUES ('forest-net', 74a13ede-0d12-11ed-861d-0242ac120002);
 
-## 5. Working with Data Types
+INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (49171ffe-0d12-11ed-861d-0242ac120002, 's1001');
+INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (49171ffe-0d12-11ed-861d-0242ac120002, 's1002');
+
+INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (74a13ede-0d12-11ed-861d-0242ac120002, 's1003');
+```
+
+📘 **Add a new sensor to a network**
+ 
+1. Get the latest bucket.
+```sql
+SELECT bucket FROM buckets_by_network WHERE network = 'forest-net' LIMIT 1;
+```
+
+2. Check the number of sensors in the bucket.
+```sql
+SELECT COUNT(*) AS sensors 
+FROM sensors_by_bucket WHERE bucket = 74a13ede-0d12-11ed-861d-0242ac120002;
+```
+
+3. Depending on the sensors-per-bucket threshold, insert a new sensor into the existing bucket, or create a new bucket and insert into the new bucket.
+```sql
+INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (74a13ede-0d12-11ed-861d-0242ac120002, 's1004');
+```
+
+📘 **Retrieve sensors in a specified network**
+
+1. Retrieve the buckets
+```sql
+SELECT bucket FROM buckets_by_network WHERE network = 'forest-net';
+```
+
+2. Retrieve the sensors
+```sql
+SELECT sensor
+FROM sensors_by_bucket 
+WHERE bucket IN (74a13ede-0d12-11ed-861d-0242ac120002, 49171ffe-0d12-11ed-861d-0242ac120002);
+```
+
+[🏠 Back to Table of Contents](#-table-of-content)
+
+## 7. Working with Data Types
 
 ### ✅ Step 5a. `List` Collections
 
@@ -286,7 +360,7 @@ WHERE handle = 'clunven';
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 6. KDM Data Modeling Tool
+## 8. KDM Data Modeling Tool
 
 - Download [the project XML file](https://raw.githubusercontent.com/datastaxdevs/workshop-cassandra-data-modeling/main/materials/kdm_sensor_data.xml)
 
@@ -304,7 +378,7 @@ WHERE handle = 'clunven';
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 7. Sensor Data Modeling
+## 9. Sensor Data Modeling
 
 ### ✅ Step 7a. Run Scenario in Killrcoda
 
@@ -632,81 +706,8 @@ WHERE sensor = 's1003'
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 8. Dynamic Bucketing
 
-Consider the table that supports query `Find all sensors in a specified network`:
-```sql
-CREATE TABLE sensors_by_network_2 (
-  network TEXT,
-  sensor TEXT,
-  PRIMARY KEY ((network), sensor) 
-);
-```
-
-Assume that a network may have none to millions of sensors. With dynamic bucketing, we can introduce artificial buckets to store sensors. A network with a few sensors may only need one bucket. A network with many sensors may need many buckets. Once buckets belonging to a particular network get filled with sensors, we can dynamically assign new buckets to store new sensors of this network.
-
-📘 **Implement dynamic bucketing in Astra DB**
-```sql
--- Table to manage buckets
-CREATE TABLE buckets_by_network (
-  network TEXT,
-  bucket TIMEUUID,
-  PRIMARY KEY ((network), bucket)
-) WITH CLUSTERING ORDER BY (bucket DESC);
-
--- Table to store sensors
-CREATE TABLE sensors_by_bucket (
-  bucket TIMEUUID,
-  sensor TEXT,
-  PRIMARY KEY ((bucket), sensor)
-);
-
-
--- Sample data
-INSERT INTO buckets_by_network (network, bucket) VALUES ('forest-net', 49171ffe-0d12-11ed-861d-0242ac120002);
-INSERT INTO buckets_by_network (network, bucket) VALUES ('forest-net', 74a13ede-0d12-11ed-861d-0242ac120002);
-
-INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (49171ffe-0d12-11ed-861d-0242ac120002, 's1001');
-INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (49171ffe-0d12-11ed-861d-0242ac120002, 's1002');
-
-INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (74a13ede-0d12-11ed-861d-0242ac120002, 's1003');
-```
-
-📘 **Add a new sensor to a network**
- 
-1. Get the latest bucket.
-```sql
-SELECT bucket FROM buckets_by_network WHERE network = 'forest-net' LIMIT 1;
-```
-
-2. Check the number of sensors in the bucket.
-```sql
-SELECT COUNT(*) AS sensors 
-FROM sensors_by_bucket WHERE bucket = 74a13ede-0d12-11ed-861d-0242ac120002;
-```
-
-3. Depending on the sensors-per-bucket threshold, insert a new sensor into the existing bucket, or create a new bucket and insert into the new bucket.
-```sql
-INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (74a13ede-0d12-11ed-861d-0242ac120002, 's1004');
-```
-
-📘 **Retrieve sensors in a specified network**
-
-1. Retrieve the buckets
-```sql
-SELECT bucket FROM buckets_by_network WHERE network = 'forest-net';
-```
-
-2. Retrieve the sensors
-```sql
-SELECT sensor
-FROM sensors_by_bucket 
-WHERE bucket IN (74a13ede-0d12-11ed-861d-0242ac120002, 49171ffe-0d12-11ed-861d-0242ac120002);
-```
-
-[🏠 Back to Table of Contents](#-table-of-content)
-
-## 9. Homework
+## 10. Homework
 
 1. Complete [Working with Data Types](#5-working-with-data-types). Take a screenshot of the CQL Console showing the rows in tables
 `table_with_udt` and `table_with_counters` before _and_ after executing the DELETE statements.
@@ -717,7 +718,7 @@ WHERE bucket IN (74a13ede-0d12-11ed-861d-0242ac120002, 49171ffe-0d12-11ed-861d-0
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
-## 10. What's NEXT ?
+## 11. What's NEXT ?
 
 We've just scratched the surface of what you can do using Astra DB, built on Apache Cassandra.
 
