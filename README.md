@@ -210,6 +210,9 @@ WHERE bucket IN (74a13ede-0d12-11ed-861d-0242ac120002, 49171ffe-0d12-11ed-861d-0
 
 ## 7. Working with Data Types
 
+<details>
+  <summary> <h3>🟪 Homework 2</h3></summary>
+
 ### ✅ Step 5a. `List` Collections
 
 📘 **Command to execute**
@@ -368,6 +371,8 @@ UPDATE table_with_counters SET notifications = notifications + 1
 WHERE handle = 'clunven';
 
 ```
+
+</details>
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
