@@ -1,6 +1,6 @@
-# 🎓🎓 Apache Cassandra™ Data Modelling
+# 🎓🎓 Apache Cassandra® Data Modelling
 
-Welcome to the **Apache Cassandra™ Data Modelling** workshop! In this two-hour workshop, we show the methodology to build an effective data model with the distributed `NoSQL database Apache Cassandra™`.
+Welcome to the **Apache Cassandra® Data Modelling** workshop! In this two-hour workshop, we show the methodology to build an effective data model with the distributed `NoSQL database Apache Cassandra™`.
 
 Using **Astra DB**, the cloud based _Cassandra-as-a-Service_ platform delivered by DataStax, we will cover the process for every developer who wants to build an application: list the use cases and build an effective data model.
 
@@ -29,13 +29,13 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 
 ## 1. Objectives
 
-1️⃣ **Give you an understanding and how and where to position Apache Cassandra™**
+1️⃣ **Understand how data is distributed and organized in Apache Cassandra®**
 
-2️⃣ **Give an overview of the NoSQL ecosystem and its rationale**
+2️⃣ **Learn how primary, partition, and clustering keys are defined in Apache Cassandra®**
 
-3️⃣ **Provide an overview of Cassandra Architecture**
+3️⃣ **Become familiar with CQL data types in Apache Cassandra®**
 
-4️⃣ **Make you create your first tables and run your first statements**
+4️⃣ **Learn about the data modeling methodology for Apache Cassandra®**
 
 🚀 **Have fun with an interactive session**
 
