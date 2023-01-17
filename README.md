@@ -59,7 +59,7 @@ In this readme, we try to provide instructions for local development as well - b
 <ul>
 <li>You will need enough "real estate" on screen, we will ask you to open a few windows and it would not fit on mobiles (tablets should be OK)
 <li>You will need an Astra account: don't worry, we'll work through that in the following
-<li>As "Intermediate level" we expect you to know what java and Spring are. 
+<li>As "Intermediate level" we expect you to know what java and Spring are.
 </ul>
 </p>
 </details>
@@ -111,7 +111,7 @@ save it somewhere safe, as it will be needed to later in other workshops (In par
 
 > **⚠️ Important**
 > ```
-> The instructor will show you on screen how to create a token 
+> The instructor will show you on screen how to create a token
 > but will have to destroy to token immediately for security reasons.
 > ```
 
@@ -139,7 +139,7 @@ Consider the table that supports query `Find all sensors in a specified network`
 CREATE TABLE sensors_by_network_2 (
   network TEXT,
   sensor TEXT,
-  PRIMARY KEY ((network), sensor) 
+  PRIMARY KEY ((network), sensor)
 );
 ```
 
@@ -173,7 +173,7 @@ INSERT INTO sensors_by_bucket (bucket, sensor) VALUES (74a13ede-0d12-11ed-861d-0
 ```
 
 📘 **Add a new sensor to a network**
- 
+
 1. Get the latest bucket.
 ```sql
 SELECT bucket FROM buckets_by_network WHERE network = 'forest-net' LIMIT 1;
@@ -181,7 +181,7 @@ SELECT bucket FROM buckets_by_network WHERE network = 'forest-net' LIMIT 1;
 
 2. Check the number of sensors in the bucket.
 ```sql
-SELECT COUNT(*) AS sensors 
+SELECT COUNT(*) AS sensors
 FROM sensors_by_bucket WHERE bucket = 74a13ede-0d12-11ed-861d-0242ac120002;
 ```
 
@@ -200,7 +200,7 @@ SELECT bucket FROM buckets_by_network WHERE network = 'forest-net';
 2. Retrieve the sensors
 ```sql
 SELECT sensor
-FROM sensors_by_bucket 
+FROM sensors_by_bucket
 WHERE bucket IN (74a13ede-0d12-11ed-861d-0242ac120002, 49171ffe-0d12-11ed-861d-0242ac120002);
 ```
 
@@ -213,7 +213,7 @@ WHERE bucket IN (74a13ede-0d12-11ed-861d-0242ac120002, 49171ffe-0d12-11ed-861d-0
 <details>
   <summary> <h3>📌 Homework 2</h3></summary>
 
-### ✅ Step 5a. `List` Collections
+### ✅ Step 7a. `List` Collections
 
 📘 **Command to execute**
 
@@ -226,11 +226,11 @@ CREATE TABLE IF NOT EXISTS table_with_list (
 );
 
 // Insert
-INSERT INTO table_with_list(uid,items) 
+INSERT INTO table_with_list(uid,items)
 VALUES (c7133017-6409-4d7a-9479-07a5c1e79306, ['a', 'b', 'c']);
 
 // Replace
-UPDATE table_with_list SET items = ['d', 'e'] 
+UPDATE table_with_list SET items = ['d', 'e']
 WHERE uid = c7133017-6409-4d7a-9479-07a5c1e79306;
 
 // Show result
@@ -245,7 +245,7 @@ UPDATE table_with_list SET items[0] = ['g']
 WHERE uid = c7133017-6409-4d7a-9479-07a5c1e79306;
 ```
 
-### ✅ Step 5b. `Set` Collections
+### ✅ Step 7b. `Set` Collections
 
 📘 **Command to execute**
 
@@ -258,7 +258,7 @@ CREATE TABLE IF NOT EXISTS table_with_set (
 );
 
 // Insert
-INSERT INTO table_with_set(uid,animals) 
+INSERT INTO table_with_set(uid,animals)
 VALUES (87fad746-4adf-4107-9858-df8643564186, {'spider', 'cat', 'dog'});
 
 // Replace
@@ -273,7 +273,7 @@ UPDATE table_with_set SET animals = animals + {'sheep'}
 WHERE uid = 87fad746-4adf-4107-9858-df8643564186;
 ```
 
-### ✅ Step 5c. `Map` Collections
+### ✅ Step 7c. `Map` Collections
 
 📘 **Command to execute**
 
@@ -287,7 +287,7 @@ CREATE TABLE IF NOT EXISTS table_with_map (
 );
 
 // Insert
-INSERT INTO table_with_map(uid, dictionary) 
+INSERT INTO table_with_map(uid, dictionary)
 VALUES ('fr_en', {'fromage':'cheese', 'vin':'wine', 'pain':'bread'});
 
 // Replace
@@ -302,7 +302,7 @@ UPDATE table_with_map SET dictionary = dictionary + {'frites':'fries'}
 WHERE uid = 'fr_en';
 ```
 
-### ✅ Step 5d. User-Defined Types
+### ✅ Step 7d. User-Defined Types
 
 📘 **Command to execute**
 
@@ -322,21 +322,21 @@ CREATE TABLE IF NOT EXISTS table_with_udt (
 );
 
 // INSERT (not quote on field names like street)
-INSERT INTO table_with_udt(uid, address) 
+INSERT INTO table_with_udt(uid, address)
 VALUES ('superman', {street:'daily planet',city:'metropolis',state:'CA'});
 
 // Replace
-UPDATE table_with_udt 
+UPDATE table_with_udt
 SET address = {street:'pingouin alley',city:'antarctica',state:'melting'}
 WHERE uid = 'superman';
 
 // Replace a single field
-UPDATE table_with_udt 
+UPDATE table_with_udt
 SET address.state = 'melt'
 WHERE uid = 'superman';
 ```
 
-### ✅ Step 5e. Counters
+### ✅ Step 7e. Counters
 
 📘 **Command to execute**
 
@@ -358,7 +358,7 @@ WHERE  handle = 'clunven';
 SELECT * from table_with_counters;
 
 // Set to 0... but set is not valid
-UPDATE table_with_counters 
+UPDATE table_with_counters
 SET following = following + 0, notifications = notifications + 0
 WHERE handle = 'clunven';
 
@@ -433,5 +433,3 @@ Congratulations: you made to the end of today's workshop.
 **... and see you at our next workshop!**
 
 > Sincerely yours, The DataStax Developers
-
-
