@@ -123,9 +123,9 @@ The status will change from `Pending` to `Active` when the database is ready, th
 
 A [GitHub](https://github.com) account may be required to run this hands-on lab in Gitpod.
 
-### ✅ Part 1: [Tables with Single-Row Partitions](https://gitpod.io/#https://github.com/datastaxdevs/workshop-cassandra-data-modeling-tables-single-row-partitions/)
+### ✅ Part 1: [Tables with Single-Row Partitions](https://gitpod.io/#https://github.com/DataStax-Academy/workshop-cassandra-data-modeling-tables-single-row-partitions/)
 
-### ✅ Part 2: [Tables with Multi-Row Partitions](https://gitpod.io/#https://github.com/datastaxdevs/workshop-cassandra-data-modeling-tables-multi-row-partitions/)
+### ✅ Part 2: [Tables with Multi-Row Partitions](https://gitpod.io/#https://github.com/DataStax-Academy/workshop-cassandra-data-modeling-tables-multi-row-partitions/)
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
@@ -403,7 +403,7 @@ WHERE handle = 'clunven';
 
 A [GitHub](https://github.com) account may be required to run this hands-on lab in Gitpod.
 
-### ✅ [Sensor Data Modeling](https://gitpod.io/#https://github.com/datastaxdevs/workshop-cassandra-data-modeling-sensor-data/)
+### ✅ [Sensor Data Modeling](https://gitpod.io/#https://github.com/DataStax-Academy/workshop-cassandra-data-modeling-sensor-data/)
 
 [🏠 Back to Table of Contents](#-table-of-content)
 
