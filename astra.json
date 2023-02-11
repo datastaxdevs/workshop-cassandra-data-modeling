@@ -1,0 +1,19 @@
+{
+  "name": "Apache Cassandra Data Modeling",
+  "description": "This session looks at how to effectively design a data model for your application. You’ll leave knowing how to create data models that scale effectively as your system grows ",
+  "duration": "120 minutes",
+  "skillLevel": "Beginner",
+  "language":["CQL"],
+  "stack":["cassandra"],
+  "githubUrl": "https://github.com/datastaxdevs/workshop-cassandra-data-modeling/",
+  "badge": "https://media.badgr.com/uploads/badges/5dee8148-ec34-43e2-a4ec-68a501130cfd.png",
+  "youTubeUrl": [ "https://www.youtube.com/watch?v=xrDfE74QnSE"],
+  "tags": [
+    { "name": "workshop" },
+    { "name": "nosql" },
+    { "name": "cassandra" },
+    { "name": "cql" }
+  ],
+  "category": "workshop",
+  "usecases": []
+}
